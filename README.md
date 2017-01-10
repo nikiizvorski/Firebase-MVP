@@ -1,10 +1,8 @@
-androidmvp
+FireBaseMVPDagger2
 ==========
 
-MVP Android Example used to explain how to use this pattern in our Android apps. This code was created to support an article explanation:
+Sample MVP Project containing Unit Tests, FireBase implementation and DI with Dagger2.
 
-[Android MVP @ antonioleiva.com (English)](http://antonioleiva.com/mvp-android)
+#### Author
 
-[Android MVP @ LiME Creative Labs (Spanish)](http://www.limecreativelabs.com/mvp-android/)
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-androidmvp-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/1514)
+- Niki Izvorski (nikiizvorski@gmail.com)
