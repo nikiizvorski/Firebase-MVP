@@ -7,6 +7,8 @@ This is how a proper non-spagetti code should look like! It have a good architec
 
 In the project you have Firebase login and some data from the firebase app. It can be a good step for someone that is just getting in to these libraries and into the android world.
 
+If you decide to use RxJava don't forget to unsubscribe and make sure to make a subscription since you will understand what will happen if you don't :) simply your observable will just push or request data while there is none.
+
 Project Structure?
 
 - Component and Module -> Dagger2 -> DI
