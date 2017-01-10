@@ -7,7 +7,7 @@ android {
     buildToolsVersion '25.0.2'
 
     defaultConfig {
-        applicationId 'com.antonioleiva.androidmvp'
+        applicationId 'com.niki.mvpexample.app'
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
@@ -25,6 +25,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.0.90-beta'
+    //Firebase
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.google.firebase:firebase-database:10.0.1'
     compile 'com.google.firebase:firebase-storage:10.0.1'
@@ -32,12 +33,15 @@ dependencies {
     // FirebaseUI Database only
     compile 'com.firebaseui:firebase-ui-storage:1.0.0'
     compile 'com.firebaseui:firebase-ui-database:1.0.0'
-
+    //Rx
     compile 'io.reactivex:rxjava:1.0.4'
     compile 'io.reactivex:rxandroid:0.24.0'
+    //Dagger
     apt 'com.google.dagger:dagger-compiler:2.2'
     compile 'com.google.dagger:dagger:2.2'
     provided 'javax.annotation:jsr250-api:1.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    //Butter
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 
 }

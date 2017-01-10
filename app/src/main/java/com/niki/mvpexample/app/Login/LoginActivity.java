@@ -14,12 +14,15 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+
 public class LoginActivity extends Activity implements LoginView {
 
-    private ProgressBar progressBar;
-    private EditText username;
-    private EditText password;
-
+    @BindView(R.id.progress) ProgressBar progressBar;
+    @BindView(R.id.username) EditText username;
+    @BindView(R.id.password) EditText password;
+    @BindView(R.id.button) Button login;
+    @BindView(R.id.button2) Button register;
     @Inject LoginPresenter presenter;
 
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -32,14 +35,14 @@ public class LoginActivity extends Activity implements LoginView {
         progressBar = (ProgressBar) findViewById(R.id.progress);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-        Button button = (Button) findViewById(R.id.button);
-        Button register = (Button) findViewById(R.id.button2);
+        login = (Button) findViewById(R.id.button);
+        register = (Button) findViewById(R.id.button2);
 
         initAppData();
 
         presenter.getAuthListener();
 
-        button.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 presenter.validateCredentials(username.getText().toString().trim(), password.getText().toString().trim());
