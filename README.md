@@ -7,6 +7,13 @@ This is how a proper non-spagetti code should look like! It have a good architec
 
 In the project you have Firebase login and some data from the firebase app. It can be a good step for someone that is just getting in to these libraries and into the android world.
 
+Project Structure?
+
+- Component and Module -> Dagger2 -> DI
+- Presenter -> Presentation Layer
+- Activity -> View Layer
+- Iterator and Model classes -> Model Layer
+
 #### Author
 
 - Niki Izvorski (nikiizvorski@gmail.com)
