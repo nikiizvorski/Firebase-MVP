@@ -14,52 +14,43 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
-
 public class LoginActivity extends Activity implements LoginView {
-
-    @BindView(R.id.progress) ProgressBar progressBar;
-    @BindView(R.id.username) EditText username;
-    @BindView(R.id.password) EditText password;
-    @BindView(R.id.button) Button login;
-    @BindView(R.id.button2) Button register;
     @Inject LoginPresenter presenter;
-
+    ProgressBar progressBar;
+    EditText username;
+    EditText password;
+    Button login;
+    Button register;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         progressBar = (ProgressBar) findViewById(R.id.progress);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-        login = (Button) findViewById(R.id.button);
-        register = (Button) findViewById(R.id.button2);
-
+        login = (Button) findViewById(R.id.login);
+        register = (Button) findViewById(R.id.register);
         initAppData();
-
-        presenter.getAuthListener();
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.validateCredentials(username.getText().toString().trim(), password.getText().toString().trim());
-            }
-        });
-
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenter.registerTheUser(username.getText().toString().trim(), password.getText().toString().trim());
-            }
-        });
+        login.setOnClickListener(v -> loginUser());
+        register.setOnClickListener(view -> registerUser());
     }
 
     @Override
     public void initAppData() {
         DaggerLoginViewComponent.builder().loginViewModule(new LoginViewModule(this)).build().inject(this);
+        presenter.getAuthListener();
+    }
+
+    @Override
+    public void registerUser() {
+        presenter.registerTheUser(username.getText().toString().trim(), password.getText().toString().trim());
+    }
+
+    @Override
+    public void loginUser() {
+        presenter.validateCredentials(username.getText().toString().trim(), password.getText().toString().trim());
     }
 
     @Override

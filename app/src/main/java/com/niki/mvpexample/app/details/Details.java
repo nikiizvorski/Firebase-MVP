@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 
 import javax.inject.Inject;
 
+import dagger.internal.DaggerCollections;
+
 public class Details extends Activity implements DetailsView, View.OnClickListener, AdapterView.OnItemClickListener {
 
     @Inject DetailsPresenter detailsPresenter;

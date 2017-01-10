@@ -21,47 +21,38 @@ class LoginInteractorImpl implements LoginInteractor {
 
     @Override
     public FirebaseAuth.AuthStateListener authListener(final OnLoginFinishedListener listener) {
-        return new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    // User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    listener.onSuccess();
-                } else {
-                    // User is signed out
-                    listener.onUsernameError();
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
-                }
+        return firebaseAuth -> {
+            FirebaseUser user = firebaseAuth.getCurrentUser();
+            if (user != null) {
+                // User is signed in
+                Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                listener.onSuccess();
+            } else {
+                // User is signed out
+                listener.onUsernameError();
+                Log.d(TAG, "onAuthStateChanged:signed_out");
             }
         };
     }
 
     @Override
     public void registerUser(String trim, String trim1, final OnLoginFinishedListener listener, final LoginView view) {
-        auth.createUserWithEmailAndPassword(trim, trim1).addOnCompleteListener((Activity) view, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (!task.isSuccessful()) {
-                    listener.onUsernameError();
-                } else {
-                    listener.onSuccess();
-                }
+        auth.createUserWithEmailAndPassword(trim, trim1).addOnCompleteListener((Activity) view, task -> {
+            if (!task.isSuccessful()) {
+                listener.onUsernameError();
+            } else {
+                listener.onSuccess();
             }
         });
     }
 
     @Override
     public void login(final String username, final String password, final OnLoginFinishedListener listener, final LoginView view) {
-        auth.signInWithEmailAndPassword(username, password).addOnCompleteListener((Activity) view, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (!task.isSuccessful()) {
-                    listener.onUsernameError();
-                } else {
-                    listener.onSuccess();
-                }
+        auth.signInWithEmailAndPassword(username, password).addOnCompleteListener((Activity) view, task -> {
+            if (!task.isSuccessful()) {
+                listener.onUsernameError();
+            } else {
+                listener.onSuccess();
             }
         });
     }

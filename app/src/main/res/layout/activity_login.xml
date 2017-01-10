@@ -31,10 +31,10 @@
         android:text="Register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:id="@+id/register" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/log_in"
