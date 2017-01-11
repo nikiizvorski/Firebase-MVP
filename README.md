@@ -35,7 +35,7 @@ Want to remove the white screen on the beggining of the app?
 
 Toasts vs Snackbar?
 
-- You can see fr your self if you use Toasts and don't manage them properly you will completely destroy the user experience. There is a lot more to this if you sit and check what is actually happening. Snackbar have support for almoust every API out there i simply suggest that you use it. And it has a good vibe on it ^^
+- You can see for your self if you use Toasts and don't manage them properly you will completely destroy the user experience. There is a lot more to this if you sit and check what is actually happening. Snackbar have support for almoust every API out there i simply suggest that you use it. And it has a good vibe on it ^^
 
 Checking if the user is logged?
 
