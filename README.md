@@ -47,7 +47,7 @@ Why Firebase?
 
 Java 1.8?
 
-- I suggest you do use the 1.8 since it is awesome and it is really helpfull and you will see that for yourself even if you denide it right now. It simply remove a ot of boilerplate and give you really really great flexability and it is really readable and removes completely the imperative style of programming which is like 20 years old.
+- I suggest you do use the 1.8 since it is awesome and it is really helpfull and you will see that for yourself even if you denide it right now. It simply remove a ot of boilerplate and give you really really great flexability and it is really readable and removes completely the imperative style of programming which is like 20 years old. But if you want to remove it and not use it just remove the jack and the compabability options and you are ready to go. Now you can use the Instant run again.
 
 #### Author
 
