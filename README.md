@@ -9,12 +9,23 @@ In the project you have Firebase login and some data from the firebase app. It c
 
 If you decide to use RxJava don't forget to unsubscribe and make sure to make a subscription since you will understand what will happen if you don't :) simply your observable will just push or request data while there is none.
 
-Project Structure?
+There may be some problems on older emulators which doesn't support Google Play Services 10+ if you have them simply test on a real device or wait for the update from google!
+
+Project Structure? Updated for the latest 2.8 libs
 
 - Component and Module -> Dagger2 -> DI
 - Presenter -> Presentation Layer
 - Activity -> View Layer
 - Iterator and Model classes -> Model Layer
+
+Using Parcelable? - these are just a couple ways to pass data between your activities
+
+- Yes we are using Parcelable since it is specificly made for Android rather than the slow Serilizalable. If you want to read more on the topic you can go and find what marshaling and unmarshaling means in Java.
+
+Removed transitions?
+
+- Yes there is no need for any animations that's why we remove them completely.
+
 
 #### Author
 
