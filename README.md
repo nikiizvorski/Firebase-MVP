@@ -26,7 +26,7 @@ Using Parcelable? - these are just a couple ways to pass data between your activ
 
 Removed transitions?
 
-- Yes there is no need for any animations that's why we remove them completely.
+- Yes there is no need for any animations that's why we remove them completely. Any diffrence between this and a fragment? Answer that one by yourself.
 
 
 #### Author
