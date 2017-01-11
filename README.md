@@ -37,6 +37,14 @@ Toasts vs Snackbar?
 
 - You can see fr your self if you use Toasts and don't manage them properly you will completely destroy the user experience. There is a lot more to this if you sit and check what is actually happening. Snackbar have support for almoust every API out there i simply suggest that you use it. And it has a good vibe on it ^^
 
+Checking if the user is logged?
+
+- There you go the level is D:LoginActivity and you can follow onAuthStateChanged:signed_in or onAuthStateChanged:signed_out. The rest i leave to you.
+
+Why Firebase?
+
+- Firebase is one of the best out there and i think is one of the most powerful, secure and wth a lot of tools and it is lightning fast too. But there are some weird stuff going on in the debugger? Well there are you know google as i do. Just Update the libs to latest and don't pay that much attention to their logs. Other than that it works really great! And it is cross platform. You have everything you may need in an app. I will leave you to look it yourself and find all the awesome tools you may use.
+
 #### Author
 
 - Niki Izvorski (nikiizvorski@gmail.com)
