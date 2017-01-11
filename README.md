@@ -9,7 +9,9 @@ In the project you have Firebase login and some data from the firebase app. It c
 
 If you decide to use RxJava don't forget to unsubscribe and make sure to make a subscription since you will understand what will happen if you don't :) simply your observable will just push or request data while there is none.
 
-There may be some problems on older emulators which doesn't support Google Play Services 10+ if you have them simply test on a real device or wait for the update from google!
+Project not Running? 
+
+- There may be some problems on older emulators which doesn't support Google Play Services 10+ if you have them simply test on a real device or wait for the update from google!
 
 Project Structure? Updated for the latest 2.8 libs
 
