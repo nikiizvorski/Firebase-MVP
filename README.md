@@ -45,6 +45,10 @@ Why Firebase?
 
 - Firebase is one of the best out there and i think is one of the most powerful, secure and wth a lot of tools and it is lightning fast too. But there are some weird stuff going on in the debugger? Well there are you know google as i do. Just Update the libs to latest and don't pay that much attention to their logs. Other than that it works really great! And it is cross platform. You have everything you may need in an app. I will leave you to look it yourself and find all the awesome tools you may use.
 
+Java 1.8?
+
+- I suggest you do use the 1.8 since it is awesome and it is really helpfull and you will see that for yourself even if you denide it right now. It simply remove a ot of boilerplate and give you really really great flexability and it is really readable and removes completely the imperative style of programming which is like 20 years old.
+
 #### Author
 
 - Niki Izvorski (nikiizvorski@gmail.com)
