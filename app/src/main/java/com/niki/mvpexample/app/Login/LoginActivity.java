@@ -14,12 +14,33 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import javax.inject.Inject;
 
+/**
+ * The type Login activity.
+ */
 public class LoginActivity extends Activity implements LoginView {
+    /**
+     * The Presenter.
+     */
     @Inject LoginPresenter presenter;
+    /**
+     * The Progress bar.
+     */
     ProgressBar progressBar;
+    /**
+     * The Username.
+     */
     EditText username;
+    /**
+     * The Password.
+     */
     EditText password;
+    /**
+     * The Login.
+     */
     Button login;
+    /**
+     * The Register.
+     */
     Button register;
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -99,5 +120,18 @@ public class LoginActivity extends Activity implements LoginView {
         if (presenter.getAuthListener() != null) {
             mAuth.removeAuthStateListener(presenter.getAuthListener());
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, 0);
+        finish();
     }
 }

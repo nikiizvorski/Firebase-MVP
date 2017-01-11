@@ -12,11 +12,17 @@ import com.google.firebase.auth.FirebaseUser;
 
 import javax.inject.Inject;
 
+/**
+ * The type Login interactor.
+ */
 class LoginInteractorImpl implements LoginInteractor {
 
     private FirebaseAuth auth = FirebaseAuth.getInstance();
     private static final String TAG = LoginActivity.class.getSimpleName();
 
+    /**
+     * Instantiates a new Login interactor.
+     */
     @Inject LoginInteractorImpl() {}
 
     @Override

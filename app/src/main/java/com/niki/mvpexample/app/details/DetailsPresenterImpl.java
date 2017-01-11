@@ -4,10 +4,25 @@ import android.widget.AdapterView;
 
 import javax.inject.Inject;
 
+/**
+ * The type Details presenter.
+ */
 class DetailsPresenterImpl implements DetailsPresenter {
+    /**
+     * The Details view.
+     */
     @Inject DetailsView detailsView;
+    /**
+     * The Details iterator.
+     */
     @Inject DetailsIterator detailsIterator;
 
+    /**
+     * Instantiates a new Details presenter.
+     *
+     * @param detailsView     the details view
+     * @param detailsIterator the details iterator
+     */
     @Inject
     DetailsPresenterImpl(DetailsView detailsView, DetailsIterator detailsIterator) {
         this.detailsView = detailsView;
@@ -34,6 +49,11 @@ class DetailsPresenterImpl implements DetailsPresenter {
         detailsView.showmsg(String.valueOf(position) + " " + parent.getItemAtPosition(position).toString());
     }
 
+    /**
+     * Gets details view.
+     *
+     * @return the details view
+     */
     DetailsView getDetailsView() {
         return detailsView;
     }

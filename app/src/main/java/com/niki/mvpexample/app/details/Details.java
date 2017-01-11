@@ -13,14 +13,25 @@ import com.niki.mvpexample.app.Login.LoginActivity;
 import com.niki.mvpexample.app.R;
 import com.niki.mvpexample.app.adapter.ListCustomAdapter;
 import com.google.firebase.database.DatabaseReference;
+import com.niki.mvpexample.app.detailsview.DetailsViewActivity;
+import com.niki.mvpexample.app.model.Knigi;
 
 import javax.inject.Inject;
 
 import dagger.internal.DaggerCollections;
 
+/**
+ * The type Details.
+ */
 public class Details extends Activity implements DetailsView, View.OnClickListener, AdapterView.OnItemClickListener {
 
+    /**
+     * The Details presenter.
+     */
     @Inject DetailsPresenter detailsPresenter;
+    /**
+     * The Firebase list adapter.
+     */
     @Inject ListCustomAdapter firebaseListAdapter;
     private ListView listView;
 
@@ -73,5 +84,22 @@ public class Details extends Activity implements DetailsView, View.OnClickListen
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         detailsPresenter.setOnItemClicked(position, parent);
+        Knigi knigi = (Knigi) parent.getAdapter().getItem(position);
+        Intent i = new Intent(this, DetailsViewActivity.class);
+        i.putExtra("com.package.ObjectA", knigi);
+        startActivity(i);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, 0);
+        finish();
     }
 }

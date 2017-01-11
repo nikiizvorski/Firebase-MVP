@@ -5,8 +5,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import javax.inject.Inject;
 
+/**
+ * The type Details iterator.
+ */
 class DetailsIteratorImpl implements DetailsIterator {
 
+    /**
+     * Instantiates a new Details iterator.
+     */
     @Inject
     DetailsIteratorImpl() {}
 

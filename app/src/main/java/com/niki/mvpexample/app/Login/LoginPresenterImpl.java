@@ -3,10 +3,25 @@ package com.niki.mvpexample.app.Login;
 import com.google.firebase.auth.FirebaseAuth;
 import javax.inject.Inject;
 
+/**
+ * The type Login presenter.
+ */
 class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
+    /**
+     * The Login view.
+     */
     @Inject LoginView loginView;
+    /**
+     * The Login interactor.
+     */
     @Inject LoginInteractor loginInteractor;
 
+    /**
+     * Instantiates a new Login presenter.
+     *
+     * @param loginInteractor the login interactor
+     * @param loginView       the login view
+     */
     @Inject
     LoginPresenterImpl(LoginInteractor loginInteractor, LoginView loginView) {
         this.loginInteractor = loginInteractor;

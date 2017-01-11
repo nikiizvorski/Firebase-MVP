@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".details.Details" />
+        <activity android:name=".detailsview.DetailsViewActivity"></activity>
     </application>
 
 </manifest>
