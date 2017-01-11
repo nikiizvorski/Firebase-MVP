@@ -28,6 +28,10 @@ Removed transitions?
 
 - Yes there is no need for any animations that's why we remove them completely. Any diffrence between this and a fragment? Answer that one by yourself.
 
+Want to remove the white screen on the beggining of the app?
+
+- Well you have to create a proper Splash Screen one that doesn't involve Threads ^^
+- There is a good guide how to do that it is simple and you don't have to remove the preview of the activity since it is an important part of your app lifecycle.
 
 #### Author
 
